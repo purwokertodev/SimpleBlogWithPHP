@@ -1,6 +1,6 @@
 <?php
 
-include "./koneksi.php";
+include "koneksi.php";
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -149,6 +149,7 @@ class Post_dao_impl implements Post_dao{
             $res = mysql_fetch_array($sql);
             $p->setId($res['id']);
             $p->setId_author($res['id_author']);
+			$p->setJudul_post($res['judul_post']);
             $p->setTanggal($res['tanggal']);
             $p->setIsi($res['isi']);
         }
